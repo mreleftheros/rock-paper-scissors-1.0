@@ -1,0 +1,149 @@
+@import "defaults";
+
+// Own styles
+
+body {
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(185, 231, 58, .8) 10%, rgba(241, 85, 111, .5));
+  overflow-y: hidden;
+}
+
+#title {
+  width: 40rem;
+  font-size: 4rem;
+  margin: 1rem auto;
+  color: #fff;
+  text-shadow: 1px 1px 3px gray, -1px -1px 3px gray;
+}
+
+#wrapper {
+  width: 60%;
+  background: #fff;
+  height: 50vh;
+  margin: auto;
+  border-radius: 2rem;
+  display: flex;
+  position: relative;
+
+  &::after {
+    content: "VS";
+    position: absolute;
+    top: 50%;
+    font-size: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-style: italic;
+    opacity: .3;
+  }
+}
+
+.player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.name {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  
+  h2 {
+    font-size: 4rem;
+    color: rgb(189, 189, 189);
+    text-shadow: 1px 1px 3px #111, -1px -1px 3px #111;
+    border-bottom: solid #111;
+  }
+}
+
+.choice {
+  flex: 3;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.score {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  
+  font-size: 3rem;
+
+  .user-score,
+  .computer-score {
+    color: rgb(197, 207, 204);
+  }
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  border: none;
+  background: #fff;
+  font-size: 5rem;
+
+  &:hover {
+    color: green;
+  }
+}
+
+#newForm {
+  display: flex;
+  width: 50%;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+  flex-direction: column;
+  background: rgba(0, 0, 0, .2);
+  padding: .5rem;
+  border-radius: 2rem;
+  
+  input, button {
+    display: inline-block;
+    width: 40%;
+    margin: .5rem auto;
+    text-align: center;
+  }
+
+  .new-btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 1.5rem;
+    background: rgb(4, 165, 177);
+    color: rgb(255, 196, 86);
+    text-shadow: 1px 1px 0 #111;
+    font-size: 1.5rem;
+
+    &:hover {
+      background: rgb(5, 212, 5);
+    }
+  }
+}
+
+#result {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.winner {
+  color: lime;
+}
+
+.loser {
+  color: crimson;
+}

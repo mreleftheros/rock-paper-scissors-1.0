@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock-Paper-Scissors</title>
+  <link rel="shortcut icon" href="#">
+  <script src="https://kit.fontawesome.com/beb53b0a86.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <h1 id="title">Rock Paper Scissors</h1>
+
+  <div id="wrapper">
+    <div class="player" id="user">
+      <div class="name" id="user-name">
+        <h2 id="user-title">User</h2>
+      </div>
+      <div id="buttons" class="choice">
+        <button id="btn-rock" class="btn">
+          <i class="rock far fa-hand-rock"></i>
+        </button>
+        <button id="btn-paper" class="btn">
+          <i class="paper far fa-hand-paper"></i>
+        </button>
+        <button id="btn-scissors" class="btn">
+          <i class="scissors far fa-hand-scissors"></i>
+        </button>
+      </div>
+      <div class="score" id="user-score">
+        <span>Score</span>
+        <span class="user-score">0</span>
+      </div>
+    </div>
+    <div class="player" id="computer">
+      <div class="name" id="computer-name">
+        <h2>Computer</h2>
+      </div>
+      <div class="choice" id="computer-choice">
+      </div>
+      <div class="score" id="computer-score">
+        <span>Score</span>
+        <span class="computer-score">0</span>
+      </div>
+    </div>
+    <div id="result"></div>
+  </div>
+  <form id="newForm" autocomplete="off">
+    <label for="userName">User Name</label>
+    <input type="text" id="userName" name="userName" maxlength="12" placeholder="Enter Your Name..." required>
+    <label for="totalRounds">Rounds</label>
+    <input type="range" min=1 max=5 id="totalRounds" name="totalRounds">
+    <span id="totalRoundsValue">1</span>
+    <button class="new-btn" type="submit">Start Game</button>
+  </form>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
